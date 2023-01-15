@@ -45,7 +45,7 @@ train_datagen = ImageDataGenerator(rescale = None,
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
 
-training_set = train_datagen.flow_from_directory('D:/__Technology___Beyond_Dreams/Deep_Learning/E-Codes/leaf_disease_detection_HYD/train',
+training_set = train_datagen.flow_from_directory('D:/pavan/projects/leaf_disease_detection/train',
                                                  target_size = (128, 128),
                                                  batch_size = 32,
                                                  class_mode = 'categorical')
@@ -53,7 +53,7 @@ training_set = train_datagen.flow_from_directory('D:/__Technology___Beyond_Dream
 labels = (training_set.class_indices)
 print(labels)
 
-test_set = test_datagen.flow_from_directory('D:/__Technology___Beyond_Dreams/Deep_Learning/E-Codes/leaf_disease_detection_HYD/test',
+test_set = test_datagen.flow_from_directory('D:/pavan/projects/leaf_disease_detection/test',
                                             target_size = (128, 128),
                                             batch_size = 32,
                                             class_mode = 'categorical')
